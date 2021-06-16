@@ -1,6 +1,7 @@
 import blogStyles from '../styles/Blog.module.css'
 import Link from 'next/Link'
 import Profile from './Profile'
+import { server } from '../config'
 
 export const BlogItem = ({ blog }) => {
     return (
@@ -12,7 +13,7 @@ export const BlogItem = ({ blog }) => {
                 </p>
 
                 <div>
-                    <Profile photoSrc={blog.profile_photo} />
+                    <Profile author={blog.author} />
                 </div>
             </a>
         </Link>
