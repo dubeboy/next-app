@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { server } from '../../../config'
 
 const blog = ({ blog } ) => {
     // const router = useRouter()
@@ -14,7 +15,7 @@ const blog = ({ blog } ) => {
 }
 
 export const getStaticProps = async (context) => {
-    const res = await fetch(`http://localhost:1337/blogs/${context.params.id}`)
+    const res = await fetch(`${server}/blogs/${context.params.id}`)
     const blog = await res.json()
   
     return {
@@ -25,7 +26,7 @@ export const getStaticProps = async (context) => {
 }
 
 export const  getStaticPaths = async () => {
-    const res = await fetch(`http://localhost:1337/blogs`)
+    const res = await fetch(`${server}/blogs`)
     const blogs = await res.json()
 
     const ids = blogs.map(blog => blog.id)

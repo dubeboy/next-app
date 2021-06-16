@@ -1,7 +1,6 @@
 import blogStyles from '../styles/Blog.module.css'
 import Link from 'next/Link'
 import Profile from './Profile'
-import { server } from '../config'
 
 export const BlogItem = ({ blog }) => {
     return (

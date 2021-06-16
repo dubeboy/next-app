@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import BlogList from '../components/BlogList'
- 
+import { server } from '../config'
 
 
 export default function Home({ blogs }) {
@@ -19,7 +19,7 @@ export default function Home({ blogs }) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch(`http://localhost:1337/blogs`)
+  const res = await fetch(`${server}/blogs`)
   const blogs = await res.json()
 
   return {

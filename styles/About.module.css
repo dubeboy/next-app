@@ -2,8 +2,8 @@
     text-align: center;
 }
 
-
 .about {
     padding-left: 30%;
     padding-right: 30%;
+    white-space: pre-line;
 }

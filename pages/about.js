@@ -1,9 +1,10 @@
 import aboutStyles from '../styles/About.module.css'
+import {server} from '../config'
 
 export const about = ({about}) => {
     return (
         <div className={aboutStyles.about}>
-            <h1 className={aboutStyles.center}>About</h1>
+            <h1 className={aboutStyles.center}>About </h1>
             <p >{about.body}</p>
         </div>
     )
@@ -11,7 +12,7 @@ export const about = ({about}) => {
 
 
 export const getStaticProps = async (context) => {
-    const res = await fetch(`http://localhost:1337/about`)
+    const res = await fetch(`${server}/about`)
     const about = await res.json()
   
     return {
