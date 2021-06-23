@@ -1,15 +1,14 @@
 .profile {
-    border-radius: 50%;
-    border: 1px solid lightgray;
-    width: 30px;
-    height: 30px;
-    padding: 1px;     
     position: relative;
     display: inline-block;
 }
 
 .profile img {
-    border-radius: 50%;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: 1px solid lightgray;
+  padding: 1px;
 }
   
   /* Tooltip text */
