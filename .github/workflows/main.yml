@@ -40,6 +40,7 @@ jobs:
       - run: npm run export
         env:
             CI: false
+            NEXT_PUBLIC_HOST: localhost
         
       - name: Deploy
         uses: amondnet/vercel-action@v20.0.0
