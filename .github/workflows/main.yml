@@ -28,19 +28,20 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
         uses: actions/checkout@v2
-        
         with:
-            persist-credentials: false
+          persist-credentials: false
 
       # Runs a single command using the runners shell
       - name: Install and build the project
         uses: actions/setup-node@v1
         with:
           node-version: '12'
-        run: npm install
-        run: npm run export
+      - run: npm install
+      - run: npm run export
+        env:
+            CI: false
         
-      - name: Vercel Action
+      - name: Deploy
         uses: amondnet/vercel-action@v20.0.0
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
