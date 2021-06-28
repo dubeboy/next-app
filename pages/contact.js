@@ -2,9 +2,6 @@ import Form from '../components/Form'
 import { server } from '../config'
 import { useState } from 'react' 
 import FormValidationErrors from '../components/FormValidationErrors'
-import contactStyles from '../styles/Contact.module.css'
-
-
 
 const contact = () => {
 
