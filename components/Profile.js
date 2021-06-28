@@ -3,7 +3,6 @@ import { server } from '../config'
 
 
 export const Profile = ({ author }) => {
-    console.log("here")
     console.log(author)
 
     return (
