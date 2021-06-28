@@ -4,10 +4,9 @@
       "enabled": false
     },
     "builds": [
-      { "src": "./out/**", "use": "@now/static" }
+      { "src": "./public/**", "use": "@now/static" }
     ],
     "routes": [
       { "src": "/(.*)", "dest": "public/$1" }
-
     ]
   }
