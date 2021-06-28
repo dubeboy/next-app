@@ -1,4 +1,5 @@
 import blogStyles from '../styles/Blog.module.css'
+import Link from 'next/link'
 import Profile from './Profile'
 
 export const BlogItem = ({ blog }) => {
